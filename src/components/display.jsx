@@ -27,6 +27,8 @@ class Display extends Component {
         
             case 'divide':
                 return filterHistory('/');
+            default:
+                break;
             
         }
 
@@ -34,7 +36,7 @@ class Display extends Component {
             for(let i = 0; i<=window.localStorage.length-1;i++){
                 let f = window.localStorage.getItem(i);
                 if(f.includes(x)){
-                    history.innerHTML += f + '<br>' + '<br>';
+                    history.innerHTML += `${f} <br> <br>`;
                 }
 
             
